@@ -1,0 +1,29 @@
+@use 'color' as color
+
+%button
+	display: inline-block
+	margin: 0
+	padding: 8px 16px
+	border: 3px solid 
+	text-decoration: none
+	font-size: 16px
+	user-select: none
+	transition: background 0.3s ease, border-color 0.3s ease
+	&:hover
+		background: color.$primary_tint_10
+		border-color: color.$primary_tint_10
+	&:active
+		background: color.$primary_shade_10
+		border-color: color.$primary_shade_10
+
+.button-primary
+	@extend %button
+	background: color.$primary
+	border-color: color.$primary
+	color: color.$fg
+
+.button-sub
+	@extend %button
+	background: transparent
+	border-color: color.$fg
+	color: color.$fg
